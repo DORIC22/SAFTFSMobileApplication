@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SAFTFS</string>
+    <string name="TextRed">КРАСНЫЙ</string>
+    <string name="TextGreen">ЗЕЛЕНЫЙ</string>
+    <string name="TextBlue">СИНИЙ</string>
+</resources>

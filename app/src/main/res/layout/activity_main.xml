@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#988686"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+
+        android:id="@+id/relativeLayout"
+        android:layout_width="355dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+
+        android:background="#BD9393"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.104">
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="144dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#403C3C"
+        android:text="Аудио"
+        android:textColor="#AE9999"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/BtnCheckSensor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnCheckSensor" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="160dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#403C3C"
+        android:text="Вибрация"
+        android:textColor="#AE9999"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/BtnColors"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnCheckSensor" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="78dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/tbutton"
+        android:onClick="toggleFlashLight"
+        android:rotation="0"
+        android:rotationX="0"
+        android:rotationY="0"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff=""
+        android:textOn=""
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/BtnColors"
+        android:layout_width="191dp"
+        android:layout_height="145dp"
+
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#403C3C"
+        android:text="Цветопередача"
+        android:textColor="#AE9999"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/BtnCheckSensor"
+        android:layout_width="205dp"
+        android:layout_height="145dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="388dp"
+        android:backgroundTint="#403C3C"
+        android:text="Тестирование сенсора"
+        android:textColor="#AE9999"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/playButton"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="186dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+
+        android:text="Тестирование:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/BtnCheckSensor"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TopHeader"
+        android:layout_width="186dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginBottom="8dp"
+        android:text="Датчики:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/TopLine"
+        android:layout_width="365dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="16dp"
+        android:background="#403C3C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/BtnNetwork"
+        android:layout_width="275dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#403C3C"
+        android:text="Интернет соединение"
+        android:textColor="#AE9999"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnColors" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

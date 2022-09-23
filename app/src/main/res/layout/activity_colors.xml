@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainWindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ColorsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConsL"
+        android:layout_width="1080px"
+        android:layout_height="2340px"
+        android:background="#D1D0DA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/BtnRed"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="12dp"
+
+            android:layout_marginBottom="44dp"
+            android:backgroundTint="#403C3C"
+            android:text="@string/TextRed"
+            android:textColor="#AE9999"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/BtnWhite" />
+
+        <Button
+            android:id="@+id/BtnGreen"
+            android:layout_width="233dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#403C3C"
+            android:onClick="onGreenButtonClick"
+            android:text="зеленый"
+            android:textColor="#AE9999"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/BtnBlue"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/BtnBlue"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#403C3C"
+            android:onClick="onBlueButtonClick"
+            android:text="Синий"
+            android:textColor="#AE9999"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/BtnWhite"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/BtnBlack"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="123dp"
+            android:layout_marginBottom="8dp"
+
+            android:backgroundTint="#403C3C"
+            android:onClick="onBlackButtonClick"
+            android:text="черный"
+            android:textColor="#AE9999"
+            android:textColorLink="#D3B1B1"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/BtnRed"
+            app:layout_constraintEnd_toEndOf="@+id/BtnBlue" />
+
+        <Button
+            android:id="@+id/BtnWhite"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginBottom="44dp"
+            android:backgroundTint="#403C3C"
+            android:onClick="onWhiteButtonClick"
+            android:text="белый"
+            android:textColor="#AE9999"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
